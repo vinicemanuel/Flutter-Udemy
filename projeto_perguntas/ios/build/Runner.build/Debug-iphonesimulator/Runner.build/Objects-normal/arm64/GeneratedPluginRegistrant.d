@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/ios/Runner/GeneratedPluginRegistrant.m \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/ios/Runner/GeneratedPluginRegistrant.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Modules/module.modulemap \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/Flutter.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterAppDelegate.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterMacros.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPlugin.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterChannels.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterCodecs.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPlatformViews.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterTexture.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterCallbackCache.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterDartProject.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterEngine.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterEngineGroup.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
+  /Users/viniciusemanuel/Desktop/projects/my/udemy/Flutter/projeto_perguntas/build/ios/Debug-iphonesimulator/Flutter.framework/Headers/FlutterViewController.h
