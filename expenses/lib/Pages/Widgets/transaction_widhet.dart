@@ -1,5 +1,6 @@
 import 'package:expenses/Models/dransaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TransactionWidget extends StatelessWidget {
   final Transaction transaction;
@@ -13,26 +14,43 @@ class TransactionWidget extends StatelessWidget {
           TransactionValue(
             value: transaction.value,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                transaction.title,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
-              ),
-              Text(
-                transaction.date.toString(),
-                style: TextStyle(
-                  color: Colors.grey.shade600,
-                ),
-              )
-            ],
+          TransactionInfos(
+            transaction: transaction,
           )
         ],
       ),
+    );
+  }
+}
+
+class TransactionInfos extends StatelessWidget {
+  const TransactionInfos({
+    super.key,
+    required this.transaction,
+  });
+
+  final Transaction transaction;
+
+  @override
+  Widget build(BuildContext context) {
+    var format = DateFormat("d MMM y");
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          transaction.title,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        Text(
+          format.format(transaction.date),
+          style: TextStyle(
+            color: Colors.grey.shade600,
+          ),
+        )
+      ],
     );
   }
 }
