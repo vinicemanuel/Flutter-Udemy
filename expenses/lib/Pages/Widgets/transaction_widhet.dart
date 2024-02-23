@@ -11,10 +11,12 @@ class TransactionWidget extends StatelessWidget {
       child: Row(
         children: [
           TransactionValue(value: transaction.value),
-          Column(children: [
-            Text(transaction.title),
-            Text(transaction.date.toString())
-          ],)
+          Column(
+            children: [
+              Text(transaction.title),
+              Text(transaction.date.toString())
+            ],
+          )
         ],
       ),
     );
@@ -34,14 +36,22 @@ class TransactionValue extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: 15,
-        vertical: 10
+        vertical: 10,
       ),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.black,
-        width: 2)
-      ),
+          border: Border.all(
+        color: Colors.purple.shade50,
+        width: 2,
+      )),
       padding: EdgeInsets.all(10),
-      child: Text(value.toString()),
+      child: Text(
+        value.toString(),
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+          color: Colors.purple,
+        ),
+      ),
     );
   }
 }
