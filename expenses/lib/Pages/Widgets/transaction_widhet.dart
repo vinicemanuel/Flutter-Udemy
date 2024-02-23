@@ -12,9 +12,21 @@ class TransactionWidget extends StatelessWidget {
         children: [
           TransactionValue(value: transaction.value),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(transaction.title),
-              Text(transaction.date.toString())
+              Text(
+                transaction.title,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              Text(
+                transaction.date.toString(),
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              )
             ],
           )
         ],
@@ -40,7 +52,7 @@ class TransactionValue extends StatelessWidget {
       ),
       decoration: BoxDecoration(
           border: Border.all(
-        color: Colors.purple.shade50,
+        color: Colors.purple,
         width: 2,
       )),
       padding: EdgeInsets.all(10),
