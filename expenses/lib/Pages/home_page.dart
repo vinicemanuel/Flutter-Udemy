@@ -1,4 +1,5 @@
 import 'package:expenses/Models/dransaction.dart';
+import 'package:expenses/Pages/Widgets/transaction_widhet.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
       value: 22,
       date: DateTime.now(),
     ),
-        Transaction(
+    Transaction(
       id: "t2",
       title: "exemplo 2",
       value: 22,
@@ -36,9 +37,7 @@ class HomePage extends StatelessWidget {
             ),
             Column(
               children: _transactions.map((tr) {
-                return Card(
-                  child: Text(tr.title),
-                );
+                return TransactionWidget(transaction: tr);
               }).toList(),
             )
           ],
