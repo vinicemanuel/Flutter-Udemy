@@ -10,7 +10,9 @@ class TransactionWidget extends StatelessWidget {
     return Card(
       child: Row(
         children: [
-          TransactionValue(value: transaction.value),
+          TransactionValue(
+            value: transaction.value,
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -24,7 +26,7 @@ class TransactionWidget extends StatelessWidget {
               Text(
                 transaction.date.toString(),
                 style: TextStyle(
-                  color: Colors.grey,
+                  color: Colors.grey.shade600,
                 ),
               )
             ],
@@ -57,7 +59,7 @@ class TransactionValue extends StatelessWidget {
       )),
       padding: EdgeInsets.all(10),
       child: Text(
-        value.toString(),
+        "R\$ ${value.toStringAsFixed(2)}",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 20,
