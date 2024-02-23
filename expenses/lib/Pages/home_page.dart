@@ -1,7 +1,23 @@
+import 'package:expenses/Models/dransaction.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  final _transactions = [
+    Transaction(
+      id: "t1",
+      title: "exemplo 1",
+      value: 22,
+      date: DateTime.now(),
+    ),
+        Transaction(
+      id: "t2",
+      title: "exemplo 2",
+      value: 22,
+      date: DateTime.now(),
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -10,14 +26,13 @@ class HomePage extends StatelessWidget {
           title: const Text("Despesas Pessoais"),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              width: double.infinity,
-              child: Card(
-                elevation: 5,
-                color: Colors.blue,
-                child: Text("grafico"),
-              ),
+            Card(
+              elevation: 5,
+              color: Colors.blue,
+              child: Text("grafico"),
             ),
             Card(
               child: Text("Lista"),
