@@ -10,15 +10,38 @@ class TransactionWidget extends StatelessWidget {
     return Card(
       child: Row(
         children: [
-          Container(
-            child: Text(transaction.value.toString()),
-          ),
+          TransactionValue(value: transaction.value),
           Column(children: [
             Text(transaction.title),
             Text(transaction.date.toString())
           ],)
         ],
       ),
+    );
+  }
+}
+
+class TransactionValue extends StatelessWidget {
+  const TransactionValue({
+    super.key,
+    required this.value,
+  });
+
+  final double value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        horizontal: 15,
+        vertical: 10
+      ),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.black,
+        width: 2)
+      ),
+      padding: EdgeInsets.all(10),
+      child: Text(value.toString()),
     );
   }
 }
