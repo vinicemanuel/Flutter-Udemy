@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
+  final titleController = TextEditingController();
+  final valueController = TextEditingController();
+
   final _transactions = [
     Transaction(
       id: "t1",
@@ -46,16 +49,21 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     TextField(
+                      controller: titleController,
                       decoration: InputDecoration(labelText: "Titulo"),
                     ),
                     TextField(
+                      controller: valueController,
                       decoration: InputDecoration(labelText: "Valor (R \$)"),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            debugPrint(
+                                "${valueController.text} ${valueController.text}");
+                          },
                           style: TextButton.styleFrom(
                             foregroundColor: Colors.purple,
                             backgroundColor: Colors.green,
