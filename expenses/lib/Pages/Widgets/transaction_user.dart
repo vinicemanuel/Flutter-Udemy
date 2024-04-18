@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:math';
 
 import 'package:expenses/Models/dransaction.dart';
@@ -14,20 +13,7 @@ class TransactionUser extends StatefulWidget {
 }
 
 class _TransactionUserState extends State<TransactionUser> {
-  final _transactions = [
-    Transaction(
-      id: "t1",
-      title: "exemplo 1",
-      value: 22,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: "t2",
-      title: "exemplo 2",
-      value: 22,
-      date: DateTime.now(),
-    ),
-  ];
+  final List<Transaction> _transactions = [];
 
   _newTransaction(String title, double value) {
     final newTransaction = Transaction(
@@ -47,7 +33,7 @@ class _TransactionUserState extends State<TransactionUser> {
     return Column(
       children: [
         TransactionList(transactions: _transactions),
-        TransactionForm(),
+        TransactionForm(onSubmit: _newTransaction),
       ],
     );
   }
