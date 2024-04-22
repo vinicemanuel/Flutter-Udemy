@@ -8,6 +8,16 @@ class TransactionForm extends StatelessWidget {
 
   final void Function(String, double) onSubmit;
 
+  _submitForm() {
+    final title = titleController.text;
+    final valueText = valueController.text.replaceAll(',', '.');
+    final value = double.tryParse(valueText) ?? 0;
+
+    if (title.isNotEmpty && value > 0) {
+      onSubmit(title, value);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -23,17 +33,13 @@ class TransactionForm extends StatelessWidget {
             TextField(
               controller: valueController,
               decoration: InputDecoration(labelText: "Valor (R \$)"),
+              keyboardType: TextInputType.numberWithOptions(decimal: true),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 TextButton(
-                  onPressed: () {
-                    final title = titleController.text;
-                    final valueText = valueController.text.replaceAll(',', '.');
-                    final value = double.tryParse(valueText) ?? 0;
-                    onSubmit(title, value);
-                  },
+                  onPressed: _submitForm,
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.purple,
                     backgroundColor: Colors.green,
